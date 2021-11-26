@@ -162,7 +162,6 @@ body::-webkit-scrollbar {
     filter: drop-shadow(0 0 0.7rem black);
 }
 
-
 .sub-content1 {
     margin-top: 12%;
     display: flex;
@@ -311,7 +310,6 @@ body::-webkit-scrollbar {
     color: white;
 }
 
-
 .progress {
     background: linear-gradient(to right, #3f00e6, #7f00fd);
     height: 1.4%;
@@ -325,21 +323,25 @@ body::-webkit-scrollbar {
     width: 20%;
 }
 
-.start{
+.start {
     padding: 0.5rem 1rem;
     border-radius: 20px;
     margin: 2rem 0.2rem 2rem 0;
     font-size: 20px;
     font-weight: bold;
+    width: 150px;
+    height: 50px;
     background: none;
     border: 2px solid white;
     color: white;
     transition: all 0.7s;
 }
-.start:hover{
+
+.start:hover {
     background: white;
 }
-.start:hover a{
+
+.start:hover a {
     color: black;
 }
 
@@ -456,7 +458,7 @@ body::-webkit-scrollbar {
 .top-left {
     padding: 20px;
     display: flex;
-    animation: moveLeft 4s linear ;
+    animation: moveLeft 4s linear;
 }
 
 @keyframes moveLeft {
@@ -479,8 +481,9 @@ body::-webkit-scrollbar {
     background: #282531;
     width: 5rem;
     height: 0.7rem;
-    animation: moveLeft 4s linear ;
+    animation: moveLeft 4s linear;
 }
+
 
 /* animation for middle */
 
@@ -709,9 +712,10 @@ body::-webkit-scrollbar {
     /* transition: all 2s; */
     /* animation: animate3 15s infinite;
     animation-delay: 10s; */
-} 
+}
 
- /* @keyframes animate {
+
+/* @keyframes animate {
     0% {
         transform: translateY(0);
     }
@@ -859,37 +863,37 @@ nav li a:hover {
 
 /* ============================================== */
 
+
 /* About Us */
 
+
 /* ============================================== */
+
 .intro-2 {
     width: 100vw;
     background: #f2f2f2;
     position: relative;
     padding-top: 3rem;
     padding-bottom: 3rem;
-  }
-  
-  .connecting_line {
+}
+
+.connecting_line {
     /* transform: skew(12deg, 27deg);
     width: 348px;
     height: 3px;
     position: relative;
     background: #000;
     top: 12rem; */
-    transform: skew(
-12deg, 
-32deg);
+    transform: skew( 12deg, 32deg);
     width: 327px;
     height: 3px;
     position: relative;
     background: #000;
-    top:20rem;
+    top: 20rem;
 }
-  #one{
-    transform: skew( 
-0deg, 
--19deg);
+
+#one {
+    transform: skew( 0deg, -19deg);
     width: 327px;
     height: 3px;
     position: relative;
@@ -897,11 +901,11 @@ nav li a:hover {
     top: 37rem;
 }
 
-#two{
-      top: 57rem;
-  }
-  
-  .intro2_container {
+#two {
+    top: 57rem;
+}
+
+.intro2_container {
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -909,43 +913,58 @@ nav li a:hover {
     align-items: center;
     flex-direction: column;
     /* border: 1px solid #000; */
-  }
-  
-  .rows {
+}
+
+.intro2_heading {
+    border: 2px solid black;
+    width: 100%;
     display: flex;
-  }
-  
-  .image_box {
+    justify-content: center;
+    height: 40%;
+}
+
+.rows {
+    display: flex;
+}
+
+.context {
+    position: relative;
+    top: 4%;
+    text-align: center;
+}
+
+.image_box {
     width: 50%;
     /* border: 2px solid black; */
     display: flex;
     justify-content: center;
     box-sizing: border-box;
     align-items: center;
-  }
-  .gif {
+}
+
+.gif {
     /* border: 2px solid black; */
     border-radius: 50%;
     height: 18rem;
     z-index: 4;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.7);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
     width: 18rem;
-  }
-  .gif img{
-      width: 100%;
-      border-radius: 50%;
-      height: 100%;
-  }
-  .image_content {
+}
+
+.gif img {
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
+}
+
+.image_content {
     padding: 2rem;
     box-sizing: border-box;
     width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content:center ;
+    justify-content: center;
     font-size: 20px;
     /* border: 2px solid black; */
-    
-  }
-
+}
