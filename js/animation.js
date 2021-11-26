@@ -16,12 +16,12 @@ function animation() {
             targets: '.top',
             // direction: 'alternate',
             translateY: -250,
-        }, '4000')
+        }, '3800')
         .add({
             targets: '.one',
             // direction: 'alternate',
             translateY: -250,
-        }, '4800')
+        }, '4500')
         .add({
             targets: '.two',
             translateY: -350,
@@ -83,7 +83,7 @@ function animation2() {
 
 setTimeout(() => {
     animation();
-}, 1500);
+}, 1000);
 // setInterval(() => {
 //     animation();
 // }, 12000);
@@ -94,18 +94,65 @@ function sleep() {
 
 setInterval(async () => {
     console.log('reached');
-    document.querySelector('.animations').style.opacity="0";
+    document.querySelector('.animations').style.opacity = "0";
     await sleep()
     document.querySelector('.box-3').style.transform = "translateY(100px)";
     document.querySelector('.box-2').style.transform = "translateY(100px)";
     document.querySelector('.two').style.transform = "translateY(0px)";
     document.querySelector('.one').style.transform = "translateY(0px)";
     document.querySelector('.top').style.transform = "translateY(0px)";
-    document.querySelector('.animations').style.opacity="1";
+    document.querySelector('.animations').style.opacity = "1";
 
     animation();
 }, 21000);
 
+// top animation
+var move = anime({
+    targets: '.bg-grey',
+    width: ['0', '100vw'],
+    duration: 10000,
+    autoplay: true,
+    direction: 'infinite',
+    easing: "easeInOutQuad",
+    loop: true,
+});
+
+// lines
+var t4 = anime.timeline({
+    duration: 9000,
+    autoplay: true,
+    easing: 'linear',
+    loop: true,
+});
+
+t4.add({
+    targets: '.small-line',
+    direction: 'alternate',
+    width: ['0', '60%'],
+}).add({
+    targets: '.middle-line',
+    direction: 'alternate',
+    width: ['0', '90%'],
+}, 400).add({
+    targets: '.final-line',
+    direction: 'alternate',
+    width: ['0', '75%'],
+}, 500)
+
+
+// box lines
+var t5 = anime({
+    targets: '.line-5',
+    width: ['0', '75%'],
+    duration: 12500,
+    autoplay: true,
+    direction: 'infinite',
+    loop: true,
+});
+
+
+
+// bottom grey blue lines
 var t2 = anime.timeline({
     duration: 800,
     loop: true,
@@ -119,7 +166,6 @@ t2.add({
 })
     .add({
         targets: document.querySelector('.line-1'),
-
         direction: 'alternate',
         width: '90%',
     })
