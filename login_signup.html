@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+    <!--  -->
+
+    <link rel="stylesheet" href="./css/login_signup.css">
+    <title>Login SignUp</title>
+</head>
+
+<body>
+    <div class="bg_animation">
+    </div>
+
+    <div class="container">
+        <input type="checkbox" id="c1">
+        <input type="checkbox" id="c2">
+
+        <div id="cover">
+            <div class="sign-up login">               
+                <h1>Login</h1>
+                <form action="">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" aria-hidden="true" id="email">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="text" aria-hidden="true" id="password">
+                    </div>
+
+                    <input type="submit" value="SUBMIT">
+                </form>
+
+                <p>Don't Have An Account?</p>
+            </div>
+        </div>
+        <div class="flip-book">
+            <div class="flip" id="p1">
+                <div class="back">
+                    <div id="image_container">
+                        <img src="./assets/authentication.svg" alt="">
+                    </div>
+                    <label for="c1" class="back-btn">Login</label>
+                </div>
+
+                <div class="front" style="background: #212121; color: white;">
+                    <!-- Login  -->
+                    <div class="wrapper">
+                        <img src="./assets/developer.svg" alt="">
+                    </div>
+                    <label for="c1" class="next-btn">Sign Up</label>
+                </div>
+            </div>
+
+            <div class="flip " id="p2">
+                <div class="back">
+                    <label for="c2" class="back-btn">Login</label>
+                </div>
+
+                <div class="front">
+                    <div class="sign-up">
+                        <h1>Sign Up</h1>
+                        <form action="" autocomplete="off">
+                            <div class="input-group">
+                                <label for="username">Username</label>
+                                <input type="text" aria-hidden="true" id="username">
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" aria-hidden="true" id="email">
+                            </div>
+                            <div class="input-group">
+                                <label for="password">Password</label>
+                                <input type="text" aria-hidden="true" id="password">
+                            </div>
+
+                            <input type="submit" value="SUBMIT">
+                        </form>
+
+                        <p>Already Have An Account?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./anime-master/lib/anime.min.js"></script>
+    
+    <script>
+        // const container = document.querySelector('.bg_animation');
+        // for (let i = 0; i <= 100; i++) {
+        //     const blocks = document.createElement('div');
+        //     blocks.classList.add('block');
+        //     container.appendChild(blocks);
+        // }
+
+        // function animation() {
+        //     anime({
+        //         targets: '.block',
+        //         translateX: function () {
+        //             return anime.random(-900, 700);
+        //         },
+        //         translateY: function () {
+        //             return anime.random(-500, 500);
+        //         },
+        //         scale: function () {
+        //             return anime.random(0,1)*0.3;
+        //         },
+        //         easing: 'linear',
+        //         duration: 3000,
+        //         delay: anime.stagger(10),
+        //         complete: animation,
+        //     })
+        // }
+        // animation()
+    </script>
+</body>
+
+</html>
