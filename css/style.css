@@ -974,3 +974,9 @@ nav li a:hover {
     font-size: 20px;
     /* border: 2px solid black; */
 }
+
+#footer2_heading {
+    background-color: #16141c;
+    padding: 10px;
+    color: #f2f2f2;
+}
