@@ -22,9 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 
     <!-- google fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Dongle:wght@300&family=Lobster&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Dongle:wght@300&family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
@@ -35,20 +33,18 @@
 <body>
 
     <!-- navbar -->
-    <script src="./js/navbar.js" type="module"></script>
-
     <div class="left" id="left_side"></div>
     <div class="right "></div>
-    <div class="navbar" data-number="1"></div>
-
+    <div class="navbar">
+        <heading id="name">NOTEBOOK</heading>
+        <div class="wrapper">
+            <i class="fab fa-snapchat-ghost" style="color: white;font-size: 30px;"></i>
+        </div>
+    </div>
     <!-- end -->
 
     <!-- intro page -->
-
     <div class="intro-1" id="home">
-        <!-- <div class="model">
-            <div class="lamp"></div>
-        </div> -->
         <img src="/assets/screen.png" id="screen">
         <!-- animations (on the monitor) -->
         <div class="animations">
@@ -132,7 +128,7 @@
             <div class="sub-content1">Content Provider For University, Assignments, NOTES, Papers & Visualiser</div>
             <div class="sub-content2">
                 <div class="subpt">The web service</div>
-                <div class="subpt">You didn't know you needed</div>
+                <div class="subpt">You didn't know you need</div>
                 <div class="subpt-animation">For
                     <div class="heading">
                         <span>Assignments</span>
@@ -148,16 +144,16 @@
                 <div class="progress__bar"></div>
             </div>
 
-            <button class="start"><a href="./login_signup.html">Login</a></button>
-            <button class="start" style="background: white;"><a href="./login_signup.html" style="color: black;">Sign
-                    Up</a></button>
+            <a href="./login_signup.html"><button class="start">Login</button></a>
+            <a href="./login_signup.html"><button class="start" style="background: white;color: black;">Sign
+                    Up</button></a>
         </div>
     </div>
 
     <div class="intro-2">
         <div class="intro2_container">
 
-            <h1>WHY YOU NEED US</h1>
+            <h1 id="footer2_heading">WHY DO YOU NEED US</h1>
 
             <!-- connecting lines -->
             <div class="connecting_line"></div>
@@ -173,17 +169,13 @@
                 </div>
                 <div class="image_content">
                     <h1>Assignments</h1>
-                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum
-                        molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed
-                        sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
+                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
                 </div>
             </div>
             <div class="rows">
                 <div class="image_content">
                     <h1>Videos and Playlist</h1>
-                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum
-                        molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed
-                        sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
+                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
                 </div>
                 <div class="image_box">
                     <div class="gif">
@@ -199,17 +191,13 @@
                 </div>
                 <div class="image_content">
                     <h1>Question Papers</h1>
-                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum
-                        molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed
-                        sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
+                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
                 </div>
             </div>
             <div class="rows">
                 <div class="image_content">
                     <h1>Algorithm Visualizer</h1>
-                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum
-                        molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed
-                        sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
+                    <p class="context">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores unde harum molestiae atque facilis autem inventore enim reprehenderit nesciunt quis, voluptas officia sed sapiente culpa aspernatur nobis, reiciendis facere perspiciatis?</p>
                 </div>
                 <div class="image_box">
                     <div class="gif">
@@ -220,17 +208,12 @@
         </div>
     </div>
 
-
-    <script src="https://unpkg.com/three@0.87.1/build/three.js"></script>
-    <script src="https://unpkg.com/three@0.87.1/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://unpkg.com/three@0.87.1/examples/js/loaders/GLTFLoader.js"></script>
-    <script src="js/lamp.js"></script>
-    <script src="js/main.js"></script>
     <script src="./anime-master/lib/anime.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="./js/animation.js"></script>
 </body>
