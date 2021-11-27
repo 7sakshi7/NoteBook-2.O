@@ -25,9 +25,3 @@ if (navbar.dataset.number == "1") {
     <i class="fab fa-snapchat-ghost" style="color: white;font-size: 30px;"></i>
 </div>`;
 }
-else {
-    navbar.innerHTML = ` <heading id="name">NOTEBOOK</heading>
-<div class="wrapper">
-    <div class="wrapper_button"></div>
-</div>`;
-}
