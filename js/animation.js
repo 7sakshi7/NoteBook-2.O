@@ -1,5 +1,5 @@
 function animation() {
-    console.log('called');
+    // console.log('called');
     var tl = anime.timeline({
         easing: 'linear',
         duration: 10000,
@@ -93,7 +93,7 @@ function sleep() {
 }
 
 setInterval(async () => {
-    console.log('reached');
+    // console.log('reached');
     document.querySelector('.animations').style.opacity = "0";
     await sleep()
     document.querySelector('.box-3').style.transform = "translateY(100px)";

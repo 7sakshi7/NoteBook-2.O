@@ -1,9 +1,9 @@
-
-
 const menuBtn = document.querySelector('.wrapper');
 const lmenu = document.querySelector('.left');
 const rmenu = document.querySelector('.right');
 let menuOpen = false;
+
+console.log(menuBtn);
 menuBtn.addEventListener('click', () => {
     if (!menuOpen) {
         menuBtn.classList.add('open');
