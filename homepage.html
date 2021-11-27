@@ -628,10 +628,10 @@
             slidesPerView: 'auto',
             loop: true,
             coverflowEffect: {
-                rotate: 10,
+                rotate: 20,
                 stretch: 0,
                 depth: 10,
-                modifier: 1,
+                // modifier: 1,
                 slideShadows: true,
             },
             pagination: {
@@ -661,7 +661,7 @@
 
         console.log(activeItem, activeItemHeight, activeItemWidth, itemPosition);
 
-        tabs.addEventListener('click', (e) => {
+        tabs.addEventListener('mouseover', (e) => {
             console.log('called', e.target);
             if (!e.target.classList.contains('nav-link')) return;
 
