@@ -339,10 +339,7 @@ body::-webkit-scrollbar {
 
 .start:hover {
     background: white;
-}
-
-.start:hover a {
-    color: black;
+    color: #000;
 }
 
 .heading {
