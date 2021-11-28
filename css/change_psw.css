@@ -5,7 +5,7 @@
 }
 
 body {
-    background: url("../assets/psw_change.jpg") no-repeat fixed;
+    background: #16141c;
     background-size: cover;
     font-family: sans-serif;
 }
@@ -85,12 +85,12 @@ a {
      top: 7rem; 
      left: 35rem; 
      /* border: 2px solid; */
-
-}
-.top{
-    position: relative;
-    top: 7rem;
-    width: 100%;
+     
+    }
+    .top{
+        position: relative;
+        top: 7rem;
+        width: 100%;
     max-width: 380px;
     padding: 80px 40px;
     background: rgba(0, 0, 0, 0.7);
@@ -108,7 +108,7 @@ a {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     color: white;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    box-shadow: -14px 14px 30px -2px rgb(0 0 0 / 90%);
 }
 
 .form img {
