@@ -380,35 +380,21 @@
         }, 1000);
 
         const initial = document.getElementById('home').getBoundingClientRect().height;
-        console.log(initial);
+        window.addEventListener('scroll', (e) => {
+            console.log(initial,window.pageYOffset);
 
-        if (window.screenY > initial) {
-            console.log('called');
-        }
-        const navHeight = document.querySelector('.navbar').getBoundingClientRect().height;
-        const nav = document.querySelector('.intro-2');
-        const navbarCallBack = function (entries, observe) {
-            const [entry] = entries;
-            console.log(entry);
-            if (!entry.isIntersecting){
+            if (window.pageYOffset > initial) {
+                document.querySelector('.navbar #name').classList.add('black');
+                console.log(document.querySelector('.navbar #name').classList);
+                document.querySelector('.wrapper i').classList.add('black');
+                console.log('called');
+            }
+            else {
                 document.querySelector('.navbar #name').classList.remove('black');
                 document.querySelector('.wrapper i').classList.remove('black');
                 console.log('stick');
             }
-            
-            else{
-                console.log('stickfguy');
-                document.querySelector('.navbar #name').classList.add('black');
-                console.log(document.querySelector('.navbar #name').classList);
-                document.querySelector('.wrapper i').classList.add('black');
-            }
-        };
-        const navbar = new IntersectionObserver(navbarCallBack, {
-            root: null,
-            threshold: 0,
-            rootMargin:`-${navHeight}px`,
-        });
-        navbar.observe(nav)
+        })
     </script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="./js/animation.js"></script>

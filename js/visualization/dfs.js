@@ -69,6 +69,7 @@ function color(e) {
             // console.log(i,j);
             // console.log(cells[((i - 1) * 34) + j]);
             // console.log(c, i, j, (i * (j - 1)), (i + j), (i * j));
+            if(c >= 532)break;
             if (getComputedStyle(cells[c]).backgroundColor == "rgb(255, 127, 80)") {
                 sx = i, sy = j;
                 // console.log(sx, sy, c);
