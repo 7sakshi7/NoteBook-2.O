@@ -153,7 +153,7 @@
     <div class="intro-2">
         <div class="intro2_container">
 
-            <h1 id="footer2_heading">WHY DO YOU NEED US</h1>
+            <h1 id="intro2_heading">WHY DO YOU NEED US</h1>
 
             <!-- connecting lines -->
             <div class="connecting_line"></div>
@@ -207,13 +207,39 @@
             </div>
         </div>
     </div>
+    <div class="intro-3">
+        <h1 id="intro3_heading">Your cup of tea?</h1>
+        <h1 id="intro3_heading2">Lets Start</h1>
+        <div class="container3">
+            <h1 id="email"><span></span>NoteBook@gmail.com</h1><a href="./login_signup.html"><button class="start" id="intro3_button">Login</button></a>
+            <div id="clockContainer">
+                <div id="hour"></div>
+                <div id="minute"></div>
+                <div id="second"></div>
+            </div>
+        </div>
+    </div>
 
     <script src="./anime-master/lib/anime.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script>
+        setInterval(() => {
+            d = new Date(); //object of date()
+            hr = d.getHours();
+            min = d.getMinutes();
+            sec = d.getSeconds();
+            hr_rotation = 30 * hr + min / 2; //converting current time
+            min_rotation = 6 * min;
+            sec_rotation = 6 * sec;
 
+            hour.style.transform = `rotate(${hr_rotation}deg)`;
+            minute.style.transform = `rotate(${min_rotation}deg)`;
+            second.style.transform = `rotate(${sec_rotation}deg)`;
+        }, 1000);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="./js/animation.js"></script>
 </body>
