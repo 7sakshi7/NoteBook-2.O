@@ -73,10 +73,12 @@ function color(e) {
 // finding source and destination coords
 async function findCoords() {
     const cells = document.querySelectorAll('.cell');
+    console.log(cells);
     let c = 0;
     for (let i = 1; i <= 12; i++) {
         for (let j = 1; j <= 34; j++) {
-
+            if(c >= 407)break;
+            console.log(c,i,j);
             if (getComputedStyle(cells[c]).backgroundColor == "rgb(255, 127, 80)") {
                 sx = i, sy = j;
                 // console.log(sx, sy, c);
@@ -87,6 +89,7 @@ async function findCoords() {
             }
             c++;
         }
+        if(c >= 407)break;
     }
     if(sx==-1 || sy==-1 || dx==-1 || dy==-1){
         alert('Select Both Source And Destination');
@@ -116,7 +119,7 @@ async function findPath() {
                 let xcord = xcor[i] + coords[0];
                 let ycord = ycor[i] + coords[1];
 
-                if (xcord < 1 || ycord < 1 || xcord > 12 || ycord > 34 || (((xcord - 1) * 34) + ycord) >= 408
+                if (xcord < 1 || ycord < 1 || xcord > 12 || ycord > 34 || (((xcord - 1) * 34) + ycord) >= 407
                     || getComputedStyle(cells[((xcord - 1) * 34) + ycord]).backgroundColor != "rgb(255, 255, 255)")
                         continue;
                     

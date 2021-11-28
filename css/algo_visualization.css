@@ -229,12 +229,12 @@ header .btn{
     margin: 0 12.5px;
 }
 
-.cell:nth-child(4){
+a:nth-child(4){
     position: relative;
     top: 14.3rem;
     left: -25.7rem;
 }
-.cell:nth-child(5){
+a:nth-child(5) {
     position: relative;
     top: -5rem;
     /* top: -8rem; */

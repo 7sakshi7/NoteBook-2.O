@@ -13,7 +13,7 @@ const screenWidth = screen.width;
 if (screenWidth > 681)
     t1.fromTo(show, 1, { height: "100vh", width: "100vw" }, { height: "66vh", width: "60vw", ease: Power2.easeInOut })
 else
-    t1.fromTo(show, 1, { height: "0vh", width: "0vw" }, { height: "66vh", width: "90vw", ease: Power2.easeInOut })
+    t1.fromTo(show, 1, { height: "66vh", width: "0vw" }, { height: "66vh", width: "90vw", ease: Power2.easeInOut })
 
 submit.addEventListener('click', checkInput);
 
@@ -128,7 +128,7 @@ async function searchElement(array) {
     while (low < high) {
         let mid = Number.parseInt((low + high) / 2);
         console.log(mid, array[mid]);
-        
+
         childArray[mid].style.backgroundColor = "lightBlue";
         childArray[mid].style.color = "black";
 
@@ -138,14 +138,14 @@ async function searchElement(array) {
         if (array[mid] == Number(searchedNumber.value)) {
             childArray[mid].style.backgroundColor = "black";
 
-            if (screenWidth > 681){           
+            if (screenWidth > 681) {
                 headerText.textContent = `Number found at ${mid + 1} position`;
                 setTimeout(() => {
-                    headerText.textContent = "" 
+                    headerText.textContent = ""
                     // header.style.display = "none";
                 }, 2000);
             }
-            else{
+            else {
                 alert(`Number found at ${mid + 1} position`);
             }
             found = 1;
@@ -163,14 +163,14 @@ async function searchElement(array) {
 
     }
     if (found == 0) {
-        if (screenWidth > 681){
+        if (screenWidth > 681) {
 
             headerText.textContent = `Number ${searchedNumber.value} not found `
             setTimeout(() => {
                 headerText.textContent = "";
             }, 2000);
         }
-        else{
+        else {
             alert(`Number ${searchedNumber.value} not found `);
         }
         inputField.textContent = "";
