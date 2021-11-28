@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
     color: white;
     letter-spacing: 1px;
     font-family: 'Dongle', sans-serif;
-    font-size: 40px !important;
+    font-size: 40px;
     font-weight: bolder;
     letter-spacing: 4px;
 }
@@ -972,8 +972,109 @@ nav li a:hover {
     /* border: 2px solid black; */
 }
 
-#footer2_heading {
+#intro2_heading {
     background-color: #16141c;
     padding: 10px;
     color: #f2f2f2;
+}
+
+.intro-3 {
+    height: 52vh;
+    background-color: #16141c;
+    color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+}
+
+#intro3_heading {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    color: #777;
+    /* border: 2px solid white; */
+    font-size: 22px;
+    height: 5vh;
+    width: 100vw;
+    padding-top: 90px;
+}
+
+#intro3_heading2 {
+    /* position: absolute; */
+    /* border: 2px solid red; */
+    width: 100vw;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.container3 {
+    /* border: 2px solid gray; x*/
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+}
+
+#email {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 40px;
+}
+
+#email span {
+    background-color: gray;
+    width: 24vw;
+    /* border: 2px solid green; */
+    position: absolute;
+    padding-bottom: 1px;
+    overflow: hidden;
+}
+
+#clockContainer {
+    position: relative;
+    /* border: 2px solid white; */
+    height: 10vw;
+    width: 18vw;
+    background-color: #16141c;
+    border: 2px solid white;
+}
+
+#hour,
+#minute {
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#second {
+    position: absolute;
+    background: red;
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;
+}
+
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;
+}
+
+#second {
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.8;
 }
