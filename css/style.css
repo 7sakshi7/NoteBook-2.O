@@ -974,12 +974,12 @@ nav li a:hover {
 
 #intro2_heading {
     background-color: #16141c;
-    padding: 10px;
+    padding: 2px;
     color: #f2f2f2;
 }
 
 .intro-3 {
-    height: 52vh;
+    height: 60vh;
     background-color: #16141c;
     color: #f2f2f2;
     display: flex;
@@ -987,20 +987,16 @@ nav li a:hover {
 }
 
 #intro3_heading {
-    /* position: absolute; */
     display: flex;
     justify-content: center;
     color: #777;
-    /* border: 2px solid white; */
     font-size: 22px;
     height: 5vh;
     width: 100vw;
-    padding-top: 90px;
+    padding-top: 50px;
 }
 
 #intro3_heading2 {
-    /* position: absolute; */
-    /* border: 2px solid red; */
     width: 100vw;
     font-size: 80px;
     display: flex;
@@ -1008,9 +1004,11 @@ nav li a:hover {
 }
 
 .container3 {
-    /* border: 2px solid gray; */
     display: flex;
+    position: relative;
     width: 100vw;
+    bottom: 0;
+    /* border: 2px solid green; */
     justify-content: space-between;
     align-items: center;
     height: auto;
@@ -1026,7 +1024,6 @@ nav li a:hover {
 #email span {
     background-color: gray;
     width: 24vw;
-    /* border: 2px solid green; */
     position: absolute;
     padding-bottom: 1px;
     overflow: hidden;
@@ -1035,7 +1032,6 @@ nav li a:hover {
 #clockContainer {
     position: relative;
     right: 20%;
-    /* border: 2px solid white; */
     height: 10vw;
     width: 10vw;
     background-color: #16141c;
@@ -1089,4 +1085,62 @@ nav li a:hover {
     justify-content: center;
     align-items: center;
     /* border: 2px solid red; */
+}
+
+.separator {
+    position: relative;
+    background: #16141c;
+    display: flex;
+    height: 5vh;
+    width: 100vw;
+}
+
+.separator1 {
+    background-color: #f2f2f2;
+    width: 50vw;
+    border-top-right-radius: 120px;
+}
+
+.separator2 {
+    background-color: #f2f2f2;
+    width: 50vw;
+    border-top-left-radius: 120px;
+}
+
+.separator3 {
+    background-color: #f2f2f2;
+    width: 50vw;
+    border-bottom-right-radius: 120px;
+}
+
+.separator4 {
+    background-color: #f2f2f2;
+    width: 50vw;
+    border-bottom-left-radius: 120px;
+}
+
+hr {
+    margin-top: 1%;
+    background-color: grey;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.social {
+    margin-top: 1%;
+    height: 6vh;
+    justify-content: center;
+    display: flex;
+    float: left;
+    /* border: 2px solid white; */
+}
+
+.social-circles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border: 2px solid grey;
+    width: 60px;
+    border-radius: 50%;
 }
