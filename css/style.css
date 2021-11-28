@@ -1008,10 +1008,10 @@ nav li a:hover {
 }
 
 .container3 {
-    /* border: 2px solid gray; x*/
+    /* border: 2px solid gray; */
     display: flex;
     width: 100vw;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: auto;
 }
@@ -1020,6 +1020,7 @@ nav li a:hover {
     display: flex;
     flex-direction: column-reverse;
     font-size: 40px;
+    padding-left: 10%;
 }
 
 #email span {
@@ -1033,11 +1034,13 @@ nav li a:hover {
 
 #clockContainer {
     position: relative;
+    right: 20%;
     /* border: 2px solid white; */
     height: 10vw;
-    width: 18vw;
+    width: 10vw;
     background-color: #16141c;
-    border: 2px solid white;
+    border-radius: 50%;
+    border: 1px solid white;
 }
 
 #hour,
@@ -1077,4 +1080,13 @@ nav li a:hover {
     top: 9%;
     left: 49.25%;
     opacity: 0.8;
+}
+
+#container3_a {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
 }
