@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./css/notes.css"> -->
+    <style>
+        @import url('https://font.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: #16141c;
+        }
+
+        /* Notes */
+
+        .container_fluid {
+            width: 100vw;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-bottom: 8rem;
+            align-items: center;
+            border: 2px solid white;
+        }
+
+        #main-heading {
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            width: 70%;
+            border: 2px solid saddlebrown;
+        }
+
+        #notes {
+            width: 70%;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-bottom: 10px;
+            border: 2px solid blue;
+        }
+
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .topic {
+            color: white;
+            text-align: left;
+            /* padding: 50px 30px 30px 30px; */
+            /* padding: 50px 30px; */
+        }
+
+        table {
+            width: 750px;
+            box-shadow: -6px 12px 12px -6px rgba(255, 255, 255, 0.5);
+        }
+
+        table,
+        td {
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            color: white;
+        }
+
+        th {
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            color: antiquewhite;
+        }
+
+        td {
+            font-size: 18px;
+            color: white;
+        }
+
+        th {
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        tr:nth-child(odd):hover {
+            background-color: lightgreen;
+            color: #000;
+            transform: scale(1);
+            transition: transform 3s ease-in;
+        }
+
+        tr:nth-child(even):hover {
+            background-color: slateblue;
+            color: #000;
+            transform: scale(1);
+            transition: transform 3s ease-in;
+        }
+
+        .btn {
+            display: block;
+            margin: auto auto;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 200;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            padding: 10px 20px;
+            border-radius: 23px;
+            cursor: pointer;
+            transform: rotate(0deg) skewX(0deg) translate(0, 0);
+            transition: 0.5s;
+            box-shadow: -2px -2px 8px rgba(255, 255, 255, 1), -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), 2px 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+
+        .btn:hover {
+            box-shadow: inset -2px -2px 8px rgba(255, 255, 255, 1), inset -2px -2px 12px rgba(255, 255, 255, 0.5), inset 2px 2px 4px rgba(255, 255, 255, 0.1), inset 2px 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        @media screen and (max-width:1300px) {
+            #left {
+                left: -101px;
+            }
+
+            #right {
+                display: flex;
+                flex-wrap: wrap;
+                left: 138px;
+                margin-left: 0;
+                width: 66%;
+                top: 266px;
+            }
+
+            .topic {
+                padding: 0px 30px 0px 30px;
+            }
+
+            table {
+                position: relative;
+                top: -149px
+            }
+
+            table,
+            td {
+                padding: 16px;
+            }
+
+            .btn {
+                padding: 10px 15px;
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width:1217px) {
+            #right {
+                width: 54%;
+            }
+        }
+
+        @media screen and (max-width:1184px) {
+            .heading {
+                left: 345px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <script src="./js/navbar.js" type="module"></script>
+
+    <div class="left" id="left_side"></div>
+    <div class="right "></div>
+    <div class="navbar" data-number="3">
+        <heading id="name" style="font-size: 22px!important;">NOTEBOOK</heading>
+        <div class="wrapper">
+            <div class="wrapper_button"></div>
+        </div>
+    </div>
+
+    <!--end-->
+
+    <div class="container_fluid">
+        <div id="main-heading">
+            <h2 class="heading"><a href="\"><i class="far fa-arrow-alt-circle-left fa-2x"></i></a>Discrete Mathematics
+                / BCSE-508</h2><br>
+        </div>
+        <div id="notes">
+            <div>
+                <h2 id="first-topic" class="topic"><i class="fas fa-university"></i> Unit-1</h2>
+            </div>
+            <table>
+                <tr>
+                    <th>Content</th>
+                    <th class="by">Uploaded By</th>
+                    <th>Uploaded on</th>
+                    <th>Size</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+
+                <tr>
+                    <td>Chapter 1</td>
+                    <td class="by">Ankit Rana</td>
+                    <td>11/12/2021</td>
+                    <td>429 KB</td>
+                    <td>
+                        <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}">View</a></button>
+                    </td>
+                    <td>
+                        <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}"
+                                download>Download</a></button>
+                    </td>
+                </tr>
+
+            </table>
+            <div>
+                <h2 class="topic"><i class="fas fa-university"></i> Unit-1</h2>
+            </div>
+            <table>
+                <tr>
+                    <th>Content</th>
+                    <th class="by">Uploaded By</th>
+                    <th>Uploaded on</th>
+                    <th>Size</th>
+                    <th>View</th>
+                    <th>Download</th>
+                </tr>
+
+                <tr>
+                    <td>Chapter 1</td>
+                    <td class="by">Ankit Rana</td>
+                    <td>11/12/2021</td>
+                    <td>429 KB</td>
+                    <td>
+                        <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}">View</a></button>
+                    </td>
+                    <td>
+                        <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}"
+                                download>Download</a></button>
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <!-- 
+        <div id="main-heading">
+        <h2 class="heading"><a href="\"><i class="far fa-arrow-alt-circle-left fa-2x"></i></a>Discrete Mathematics
+            / BCSE-508</h2><br>
+    </div>
+    <div id="notes">
+        <div> <h2 id="first-topic"class="topic"><i class="fas fa-university"></i> Unit-1</h2></div>
+        <table>
+            <tr>
+                <th>Content</th>
+                <th class="by">Uploaded By</th>
+                <th>Uploaded on</th>
+                <th>Size</th>
+                <th>View</th>
+                <th>Download</th>
+            </tr>
+
+            <tr>
+                <td>Chapter 1</td>
+                <td class="by">Ankit Rana</td>
+                <td>11/12/2021</td>
+                <td>429 KB</td>
+                <td>
+                    <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}">View</a></button>
+                </td>
+                <td>
+                    <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}"
+                            download>Download</a></button>
+                </td>
+            </tr>
+           
+        </table>
+        <div><h2 class="topic"><i class="fas fa-university"></i> Unit-1</h2></div>
+        <table>
+            <tr>
+                <th>Content</th>
+                <th class="by">Uploaded By</th>
+                <th>Uploaded on</th>
+                <th>Size</th>
+                <th>View</th>
+                <th>Download</th>
+            </tr>
+
+            <tr>
+                <td>Chapter 1</td>
+                <td class="by">Ankit Rana</td>
+                <td>11/12/2021</td>
+                <td>429 KB</td>
+                <td>
+                    <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}">View</a></button>
+                </td>
+                <td>
+                    <button class="btn"><a style="color:black;" href="{{ x.file_upload.url }}"
+                            download>Download</a></button>
+                </td>
+            </tr>
+           
+        </table>
+        </div> -->
+    <script>
+        const navbar = document.querySelector(".navbar");
+        navbar.addEventListener("click", () => {
+            let elem = document.getElementById('greetuser');
+            let elem2 = document.getElementById('main-heading');
+            let elem3 = document.getElementById('right');
+
+            if (document.getElementById('select-link').style.display == "flex") {
+                document.getElementById('select-link').style.display = "none";
+                elem.classList.remove("topuser");
+                elem2.classList.remove("shift");
+                elem3.classList.remove("topcontainer");
+            }
+            else {
+                document.getElementById('select-link').style.display = "flex";
+                console.log("hello");
+                elem.classList.add("topuser");
+                elem2.classList.add("shift");
+                elem3.classList.add("topcontainer");
+                console.log("hello2");
+            }
+        });
+    </script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
