@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #16141c;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background-color: transparent;
+            height: 150px;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            align-items: center;
+            z-index: 100;
+        }
+
+        #name {
+            padding-left: 4%;
+            color: white;
+            letter-spacing: 1px;
+            font-family: 'Dongle', sans-serif;
+            font-size: 40px !important;
+            font-weight: bolder;
+            letter-spacing: 4px;
+        }
+
+        #name.nav-active {
+            color: black;
+            font-weight: bolder;
+        }
+
+        .left {
+            position: fixed;
+            background: linear-gradient(to bottom right, #4facfe, #a664f7);
+            height: 100vh;
+            width: 25vw;
+            z-index: 12;
+            transition: all 1s;
+            display: block;
+            transform: translateY(-800px);
+        }
+
+        .right {
+            position: fixed;
+            overflow: hidden;
+            background: black;
+            height: 100vh;
+            width: 75vw;
+            right: 0;
+            bottom: 0;
+            transition: all 1s;
+            z-index: 12;
+            display: block;
+            transform: translateY(800px);
+        }
+
+        .openL,
+        .openR {
+            transform: translateY(0);
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            margin-right: 4%;
+            right: 0;
+            align-items: center;
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+        }
+
+        .wrapper_button {
+            width: 30px;
+            height: 3px;
+            background: white;
+            transition: all .5s ease-in-out;
+        }
+
+        .wrapper_button::before,
+        .wrapper_button::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 3px;
+            background: white;
+            transition: all .5s ease-in-out;
+        }
+
+        .wrapper_button::before {
+            transform: translateY(-16px);
+        }
+
+        .wrapper_button::after {
+            transform: translateY(16px);
+        }
+
+
+        /* Animation */
+
+        .wrapper.open {
+            border: 2px solid white;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            width: 50px;
+        }
+
+        .wrapper.open .wrapper_button {
+            transform: translateX(-50px);
+            background: transparent;
+        }
+
+        .wrapper.open .wrapper_button::before {
+            transform: rotate(45deg) translate(35px, -35px);
+        }
+
+        .wrapper.open .wrapper_button::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+        }
+
+        .container_fluid {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 2px solid white;
+            color: gainsboro;
+            padding-top: 1rem;
+        }
+
+        .container_fluid h2 {
+            text-transform: uppercase;
+            margin: 1rem 0;
+        }
+
+        .sem_container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 40%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+        .semester {
+            padding: 0.4rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .semester .sem {
+            margin: 1rem 1rem;
+            background: linear-gradient(to right, #4facfe, #a664f7);
+            padding: 0.5rem 1.4rem;
+            border-radius: 30px;
+            font-size: 20px;
+        }
+
+        .semester .sem a {
+            color: white;
+        }
+
+        .semester .active_sem {
+            background: white;
+        }
+
+        .semester .active_sem a {
+            background: linear-gradient(to bottom right, #4facfe, #a664f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bolder;
+        }
+
+        .divider {
+            width: 10%;
+            height: 1.5px;
+            border-radius: 20px;
+            background: gainsboro;
+        }
+
+        .subject_container {
+            width: 80%;
+            /* border: 2px solid white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .subject_container .card {
+            position: relative;
+            background: linear-gradient(to bottom, #4facfe, #7a47ba);
+            width: 300px;
+            height: 400px;
+            margin: 1rem 3rem;
+            padding-bottom: 0.7rem;
+            border-radius: 30px;
+        }
+        .sub-content{
+            width: 100%;
+            height: 100%;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .sub-content #subcode{
+            font-size: 30px;
+        }
+        .sub-content #subname{
+            font-size: 35px;
+            text-align: center;
+        }
+        .sub-content #desc{
+            width: 100%;
+            padding: 0 1rem;
+            overflow-y: scroll;
+            font-size: 20px;
+            position: absolute;
+            bottom: 0.9rem;
+            height: 60%;
+            color: white;
+        }
+        .sub-content #desc::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <script src="./js/navbar.js" type="module"></script>
+
+    <div class="left" id="left_side"></div>
+    <div class="right "></div>
+    <div class="navbar" data-number="3">
+        <heading id="name" style="font-size: 22px!important;">NOTEBOOK</heading>
+        <div class="wrapper">
+            <div class="wrapper_button"></div>
+        </div>
+    </div>
+
+    <div class="container_fluid">
+        <!-- Semester -->
+        <h2>Semester</h2>
+        <div class="sem_container">
+
+            <div class="semester">
+                <div class="sem active_sem"><a href="">Sem1</a></div>
+                <div class="sem"><a href="">Sem2</a></div>
+                <div class="sem"><a href="">Sem3</a></div>
+                <div class="sem"><a href="">Sem4</a></div>
+                <div class="sem"><a href="">Sem5</a></div>
+                <div class="sem"><a href="">Sem6</a></div>
+                <div class="sem"><a href="">Sem7</a></div>
+                <div class="sem"><a href="">Sem8</a></div>
+            </div>
+        </div>
+        <!-- end -->
+
+        <!-- Divider -->
+        <div class="divider"></div>
+        <!-- end -->
+
+        <!-- Subject -->
+        <div class="subject_container">
+            <div class="card">
+                <a class="sub-content">
+                    <h2 id="subcode">BHUM-508</h2>
+                    <h3 id="subname">Environmental Studies</h3><br>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
+                        in his book
+                        Man and Nature, is a multidisciplinary academic field which systematically
+                        studies human
+                        interaction with the environment. Environmental studies
+                        connects principles from the physical sciences, commerce/economics, the
+                        humanities, and
+                        social sciences to address complex contemporary environmental issues.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="sub-content">
+                    <h2 id="subcode">BHUM-508</h2>
+                    <h3 id="subname">Environmental </h3><br>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
+                        in his book
+                        Man and Nature, is a multidisciplinary academic field which systematically
+                        studies human
+                        interaction with the environment. Environmental studies
+                        connects principles from the physical sciences, commerce/economics, the
+                        humanities, and
+                        social sciences to address complex contemporary environmental issues.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="sub-content">
+                    <h2 id="subcode">BHUM-508</h2>
+                    <h3 id="subname">Environmental Studies</h3><br>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
+                        in his book
+                        Man and Nature, is a multidisciplinary academic field which systematically
+                        studies human
+                        interaction with the environment. Environmental studies
+                        connects principles from the physical sciences, commerce/economics, the
+                        humanities, and
+                        social sciences to address complex contemporary environmental issues.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="sub-content">
+                    <h2 id="subcode">BHUM-508</h2>
+                    <h3 id="subname">Environmental Studies</h3><br>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
+                        in his book
+                        Man and Nature, is a multidisciplinary academic field which systematically
+                        studies human
+                        interaction with the environment. Environmental studies
+                        connects principles from the physical sciences, commerce/economics, the
+                        humanities, and
+                        social sciences to address complex contemporary environmental issues.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="sub-content">
+                    <h2 id="subcode">BHUM-508</h2>
+                    <h3 id="subname">Environmental Studies</h3><br>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
+                        in his book
+                        Man and Nature, is a multidisciplinary academic field which systematically
+                        studies human
+                        interaction with the environment. Environmental studies
+                        connects principles from the physical sciences, commerce/economics, the
+                        humanities, and
+                        social sciences to address complex contemporary environmental issues.</p>
+                </a>
+            </div>
+            <div class="card">
+                <a class="sub-content">
+                    <h2 id="subcode">BHUM-508</h2>
+                    <h3 id="subname">Environmental Studies</h3><br>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
+                        in his book
+                        Man and Nature, is a multidisciplinary academic field which systematically
+                        studies human
+                        interaction with the environment. Environmental studies
+                        connects principles from the physical sciences, commerce/economics, the
+                        humanities, and
+                        social sciences to address complex contemporary environmental issues.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- end -->
+
+
+
+    </div>
+
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
