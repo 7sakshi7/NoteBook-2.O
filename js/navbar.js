@@ -1,9 +1,9 @@
 const leftSide = document.getElementById('left_side');
 leftSide.innerHTML = ` <nav>
 <ul>
-    <li data-aos="fade-up" data-aos-duration="2000"> <a class="navbar-items" href="./login_signup.html" id="home">Home</a> </li>
+    <li data-aos="fade-up" data-aos-duration="2000"> <a class="navbar-items" href="./homepageV2.html" id="home">Home</a> </li>
     <li data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000"><a class="navbar-items" href="./login_signup.html">About Us</a> </li>
-    <li data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"><a class="navbar-items" href="./login_signup.html">Algorithm Visualizer</a>
+    <li data-aos="fade-up" data-aos-delay="200" data-aos-duration="2000"><a class="navbar-items" href="./algo_visualization.html">Algorithm Visualizer</a>
     </li>
     <li data-aos="fade-up" data-aos-delay="400" data-aos-duration="2000"><a class="navbar-items" href="./login_signup.html">Notes</a> </li>
 </ul>
