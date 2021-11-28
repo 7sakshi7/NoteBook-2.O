@@ -7,188 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="./css/style.css">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #16141c;
-            overflow-x: hidden;
-        }
-        
-        .container_fluid {
-            background: #16141c;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            /* border: 2px solid white; */
-            color: gainsboro;
-            padding-top: 1rem;
-        }
-
-        .container_fluid .image_container {
-            /* position: relative; */
-            background: url('./assets/Image\ .png')no-repeat center/cover;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            height: 100vh;
-            background-blend-mode:screen;
-            /* mix-blend-mode: ; */
-
-        }
-        
-        .container_fluid .image_container h1 {
-            text-transform: uppercase;
-            opacity: 1;
-            line-height: 100px;
-            z-index: 5;
-            font-size: 3rem;
-            color: white !important;
-            font-weight: bolder;
-            letter-spacing: 13px;
-        }
-        .container_fluid .image_container .ntbk{
-            font-size: 5rem;
-        }
-
-        .container_fluid h2 {
-            text-transform: uppercase;
-            margin: 1rem 0;
-        }
-        .overlay{
-            position: absolute;
-            left: 0;
-            /* top: 99vh; */
-            top: 0;
-            width: 100vw;
-            bottom: -2.5rem;
-            background-blend-mode: screen;
-            /* border: 2px solid ; */
-            /* background: linear-gradient(0deg , rgba(0, 0, 0, 0.4),rgba(22, 20, 28, 1)); */
-            background: linear-gradient( rgba(22, 20, 28, 0.1),rgba(22, 20, 28, 1));
-        }
-
-        .sem_container {
-            display: flex;
-            flex-wrap: wrap;
-            width: 40%;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-
-        .semester {
-            padding: 0.4rem;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            box-sizing: border-box;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        .semester .sem {
-            margin: 1rem 1rem;
-            background: linear-gradient(to right, #4facfe, #a664f7);
-            padding: 0.5rem 1.4rem;
-            border-radius: 30px;
-            font-size: 20px;
-        }
-
-        .semester .sem a {
-            color: white;
-        }
-
-        .semester .active_sem {
-            background: white;
-        }
-
-        .semester .active_sem a {
-            background: linear-gradient(to bottom right, #4facfe, #a664f7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: bolder;
-        }
-
-        .divider {
-            width: 10%;
-            height: 1.5px;
-            border-radius: 20px;
-            background: gainsboro;
-        }
-
-        .subject_container {
-            width: 80%;
-            /* border: 2px solid white; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .subject_container .card {
-            position: relative;
-            background: linear-gradient(to bottom, #4facfe, #7a47ba);
-            width: 300px;
-            height: 400px;
-            margin: 1rem 3rem;
-            padding-bottom: 0.7rem;
-            border-radius: 30px;
-            box-shadow: -14px 14px 70px -2px rgb(0 0 0 / 90%);
-        }
-
-        .sub-content {
-            width: 100%;
-            height: 100%;
-            color: black;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .sub-content #subcode {
-            font-size: 30px;
-        }
-
-        .sub-content #subname {
-            font-size: 35px;
-            text-align: center;
-        }
-
-        .sub-content #desc {
-            width: 100%;
-            padding: 0 1rem;
-            overflow-y: scroll;
-            font-size: 20px;
-            color: white;
-        }
-
-        .sub-content #desc::-webkit-scrollbar {
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/homepage.css">
 
 </head>
 
 <body>
     <!-- navbar -->
     <script src="./js/navbar.js" type="module"></script>
-
     <div class="left" id="left_side"></div>
     <div class="right "></div>
     <div class="navbar" data-number="3">
@@ -232,84 +57,43 @@
                 <a class="sub-content">
                     <h2 id="subcode">BHUM-508</h2>
                     <h3 id="subname">Environmental Studies</h3><br>
-                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
-                        in his book
-                        Man and Nature, is a multidisciplinary academic field which systematically
-                        studies human
-                        interaction with the environment. Environmental studies
-                        connects principles from the physical sciences, commerce/economics, the
-                        humanities, and
-                        social sciences to address complex contemporary environmental issues.</p>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh in his book Man and Nature, is a multidisciplinary academic field which systematically studies human interaction with the environment.Environmental studies, a term
+                        first coined by George Perkins Marsh in his book Man and Nature, is a multidisciplinary academic field which systematically studies human interaction with the environment.</p>
                 </a>
             </div>
             <div class="card">
                 <a class="sub-content">
                     <h2 id="subcode">BHUM-508</h2>
-                    <h3 id="subname">Environmental </h3><br>
-                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
-                        in his book
-                        Man and Nature, is a multidisciplinary academic field which systematically
-                        studies human
-                        interaction with the environment. Environmental studies
-                        connects principles from the physical sciences, commerce/economics, the
-                        humanities, and
-                        social sciences to address complex contemporary environmental issues.</p>
+                    <h3 id="subname">Environment</h3><br>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh in his book Man and Nature, is a multidisciplinary academic field which systematically studies human interaction with the environment.</p>
                 </a>
             </div>
             <div class="card">
                 <a class="sub-content">
                     <h2 id="subcode">BHUM-508</h2>
                     <h3 id="subname">Environmental Studies</h3><br>
-                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
-                        in his book
-                        Man and Nature, is a multidisciplinary academic field which systematically
-                        studies human
-                        interaction with the environment. Environmental studies
-                        connects principles from the physical sciences, commerce/economics, the
-                        humanities, and
-                        social sciences to address complex contemporary environmental issues.</p>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh in his book Man and Nature, is a multidisciplinary academic field which systematically studies human interaction with the environment.</p>
                 </a>
             </div>
             <div class="card">
                 <a class="sub-content">
                     <h2 id="subcode">BHUM-508</h2>
                     <h3 id="subname">Environmental Studies</h3><br>
-                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
-                        in his book
-                        Man and Nature, is a multidisciplinary academic field which systematically
-                        studies human
-                        interaction with the environment. Environmental studies
-                        connects principles from the physical sciences, commerce/economics, the
-                        humanities, and
-                        social sciences to address complex contemporary environmental issues.</p>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh in his book Man and Nature, is a multidisciplinary academic field which systematically studies human interaction with the environment.</p>
                 </a>
             </div>
             <div class="card">
                 <a class="sub-content">
                     <h2 id="subcode">BHUM-508</h2>
                     <h3 id="subname">Environmental Studies</h3><br>
-                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
-                        in his book
-                        Man and Nature, is a multidisciplinary academic field which systematically
-                        studies human
-                        interaction with the environment. Environmental studies
-                        connects principles from the physical sciences, commerce/economics, the
-                        humanities, and
-                        social sciences to address complex contemporary environmental issues.</p>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh in his book Man and Nature, is a multidisciplinary academic field which systematically studies human interaction with the environment.</p>
                 </a>
             </div>
             <div class="card">
                 <a class="sub-content">
                     <h2 id="subcode">BHUM-508</h2>
                     <h3 id="subname">Environmental Studies</h3><br>
-                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh
-                        in his book
-                        Man and Nature, is a multidisciplinary academic field which systematically
-                        studies human
-                        interaction with the environment. Environmental studies
-                        connects principles from the physical sciences, commerce/economics, the
-                        humanities, and
-                        social sciences to address complex contemporary environmental issues.</p>
+                    <p id="desc">Environmental studies, a term first coined by George Perkins Marsh in his book Man and Nature, is a multidisciplinary academic field which systematically studies human interaction with the environment.</p>
                 </a>
             </div>
         </div>
